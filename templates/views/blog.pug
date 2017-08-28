@@ -12,7 +12,7 @@ mixin post(post)
 					a(href='/blog/' + cat.key)= cat.name
 					if i < post.categories.length - 1
 						| , 
-					else
+					else2
 						|  
 			if post.author
 				| by #{post.author.name.first}
@@ -23,12 +23,12 @@ mixin post(post)
 			p.read-more: a(href='/blog/post/' + post.slug) Read more...
 
 block intro
-	.container
+	.row.row-heading.clearfix
 		h1= data.category ? data.category.name : 'Blog'
 
 block content
-	.container: .row
-		.col-sm-8.col-md-9
+	.no-padding-top.row.clearfix
+		.col-3-4
 			if filters.category && !data.category
 				h3.text-muted Invalid Category.
 			else
@@ -64,12 +64,18 @@ block content
 					if data.category
 						h3.text-muted There are no posts in the category #{data.category.name}.
 					else
-						h3.text-muted There are no posts yet.
-		
+						h3.text-muted 
+							| Working on it. 
+							| Come back soon!!
+
+
 		if data.categories.length
-			.col-sm-4.col-md-3
+			.col-3
 				h2 Categories
 				.list-group(style='margin-top: 70px;')
 					a(href='/blog', class=!data.category ? 'active' : false).list-group-item All Categories
 					each cat in data.categories
 						a(href='/blog/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
+
+block footer
+		include ../mixins/footer

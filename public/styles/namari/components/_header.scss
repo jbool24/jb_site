@@ -1,0 +1,25 @@
+#header {
+    height: 71px !important;
+    overflow: visible;
+    z-index: 9999;
+    width: 100%;
+    position: absolute !important;
+}
+
+#header .row {
+    padding: 0;
+}
+
+#header aside {
+    text-align: right;
+}
+
+#header ul {
+    text-align: left;
+}
+
+#header li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+}

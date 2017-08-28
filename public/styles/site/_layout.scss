@@ -1,16 +1,94 @@
-#header {
-	margin-top: 30px;
+body {
+	color: #111;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
+main {
+	flex: 1 0 auto;
+}
+
+section {
+	padding-top: 10px;
+}
+
+footer {
+	background-color: orange;
+}
+
+#header {
+	// margin-top: 30px;
+}
+
+#body {
+	// background-image: url('../images/python_bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#main {}
+
 #footer {
-	margin-top: 30px;
-	border-top: 1px solid #eeeeee;
+	// margin-top: 30px;
+	// border-top: 1px solid #eeeeee;
 	padding-top: 30px;
 	color: #777777;
 }
 
-.gallery-image img{
-    display: block;
-    max-width: 100%;
-    height: auto;
+.gallery-image img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.into-block > .greeting > h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	color: white;
+	padding-left: 25px;
+}
+
+.greeting {
+	margin-top: 150px;
+	letter-spacing: 2px;
+}
+
+.about-container {
+	height: 300px;
+	background-color: #fefefe;
+}
+
+.text-montserrat {
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.text-montserrat.highlight {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-weight: bold;
+	color: blue;
+}
+
+.avatar {
+	border-radius: 100px;
+	padding: 10px;
+}
+
+.pad-left {
+	padding-left: 20px;
+}
+
+.pad-right {
+	padding-right: 20px;
+}
+
+.separator::before {
+	content: "|";
+	padding-left: 20px;
+	padding-right: 20px;
 }
