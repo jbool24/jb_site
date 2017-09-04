@@ -17,85 +17,15 @@ block banner-content
 
 
 block content
-  //- Introduction
-  section#about.introduction.scrollto
-   .row.clearfix
-    .col-3
-     .section-heading
-      h3 TECHNOLOGY
-      h2.section-title Some Of My Current Tech-Stack
-      p.section-subtitle
-       | These are some of the languages, libraries, and frameworks 
-       | I use frequently. Even though these are the ones I have 
-       | exerience with, there are no sacred cows here. I always 
-       | have my ear to the ground as new tech rolls into town.
+  //- Content Components
+  include components/aboutme
+  include components/technologies
 
-    .col-2-3
-     //- Icon Block
-     .col-2.icon-block.icon-top.wow.fadeInUp(data-wow-delay="0.1s")
-      //- Icon
-      .icon: i.fa.fa-html5.fa-2x
-      //- Icon Block Description
-      .icon-block-description
-       h4 HTML5 | CSS3 | JS
-       p
-        | The holy trinity of the web. These tools only get more 
-        | and more powerful as time goes on and I make it a 
-        | priority to stay up-to-date with the new stable specs.
-     //- End of Icon Block
-
-     //- Icon Block-->
-     .col-2.icon-block.icon-top.wow.fadeInUp(data-wow-delay="0.3s")
-      //- Icon
-      .icon: i.fa.fa-linux.fa-2x
-      //- Icon Block Description
-      .icon-block-description
-       h4 I 
-        i.fa.fa-heart 
-        span  Linux
-       p 
-        | It was love at first boot-up. I also use macOS but ever 
-        | since I met Linux 10 years ago I knew I found my favorite toy. I 
-        | believe in the open-source movement and promote linux as 
-        | an operating system for its freedom and flexability. (I 
-        | like mine debian flavored!)
-     //- End of Icon Block
-
-     //- Icon Block
-     .col-2.icon-block.icon-top.wow.fadeInUp(data-wow-delay="0.5s")
-      //- Icon
-      .icon: i.fa.fa-server.fa-2x
-      //- Icon Block Description
-      .icon-block-description
-       h4 Server-Side
-       p 
-        | On the server side I use Node.js and Python3 
-        | extensivly. With libraries like Express.js, 
-        | Keystone.js, Pug.js (formaly Jade), Flask 
-        | Microframework, and Django, building apps and 
-        | websites is fast and reliable.
-      //- End of Icon Block
-
-     <!--Icon Block-->
-     .col-2.icon-block.icon-top.wow.fadeInUp(data-wow-delay="0.5s")
-      //- Icon
-      .icon: i.fa.fa-database.fa-2x
-      //- Icon Block Description
-      .icon-block-description
-       h4 Database
-       p
-        | Right now MySQL and Monogo are the persistance 
-        | technologies in most of my projects. I've also used 
-        | Firebase as another non-SQL DB and enjoy it for its 
-        | performance with mobile applications.</p>
-     //- End of Icon Block
-
-  include ../views/components/aboutme
 
 
 
 block footer
- include ../views/components/footer
+ include components/footer
 
 block js
  script(src='js/wow.min.js')
