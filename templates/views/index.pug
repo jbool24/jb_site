@@ -1,19 +1,28 @@
 extends ../layouts/default
 
 block banner-content
- #banner-content.row.clearfix
-  .col-38
-   .section-heading
-    h1 HELLO! I'M JUSTIN BELLERO
-    h2 
-     | I'm a freelancer, developer, Yogi, and an Internet-of-Things 
-     | enthusist. I spend a good amount of free-time reading through
-     | documentation and researching open software I like to follow.
-     | I do my best to learn one new thing each day because I believe
-     | lifelong learning is the key to happiness and staying sharp.
-   //- Call to Action
-   a.button(href="/contact") Hire Me!
-   //- End Call to Action
+  #banner-content.row.clearfix
+    .col-38
+      .section-heading
+        h1.no-padding-bottom HELLO! I'M...
+        h1 JUSTIN BELLERO
+        h2 
+          | I'm a developer, freelancer, yogi, an IoT integrator, open-source enthusist,
+          | <s>cryptocoin billionare</s>, <s>father of four</s>, <s>and seasonal space traveler</s>. 
+          | Ok, so only the former few are true but perhaps <i>someday</i> they'll all be true.
+          p
+            | I graduated from NYU with a degree in music and used to be a performer,
+            | worked in chemical manufacturing for half a decade, spend a little time in the continuing education space,
+            | but my passion is code. Here is my <a href="https://drive.google.com/open?id=0BzZ3DlB0buF7Tk9iUE9lT2pwQ3M">resume</a>.
+            | I spend a good amount of time reading up on technical
+            | documentation and researching open software that I'd like to follow, especially home-automation.
+            | I am always looking for cool things to work on so if you want to 
+            | talk tech, need some help or information about a project, or you 
+            | have a great idea I can make a reality for you, <span style="font-weight: bold;">reach out!</span> 
+            | I’m here and would love to connect.
+      //- Call to Action
+      a.button(href="/contact") Hire Me!
+      //- End Call to Action
 
 
 block content
@@ -25,10 +34,10 @@ block content
 
 
 block footer
- include components/footer
+  include components/footer
 
 block js
- script(src='js/wow.min.js')
- script(src='js/jquery.enllax.min.js')
- script(src='js/jquery.easing.min.js')
- script(src='js/jquery.waypoints.min.js')
+  script(src='js/wow.min.js')
+  script(src='js/jquery.enllax.min.js')
+  script(src='js/jquery.easing.min.js')
+  script(src='js/jquery.waypoints.min.js')
