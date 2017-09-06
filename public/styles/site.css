@@ -140,10 +140,13 @@ section {
   padding-top: 75px !important; }
 
 .extra-big-padding-top {
-  padding-top: 200px !important; }
+  padding-top: 170px !important; }
 
 .big-padding-bottom {
   padding-bottom: 85px !important; }
+
+.extra-big-padding-bottom {
+  padding-bottom: 170px !important; }
 
 /* Targets all elements */
 [class*='col-'] {
