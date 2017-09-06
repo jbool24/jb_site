@@ -4,7 +4,6 @@ require('dotenv').config();
 
 const keystone = require('keystone');
 
-
 keystone.init({
   'name': 'Justin Bellero',
   'brand': 'Justin Bellero',

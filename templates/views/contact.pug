@@ -2,8 +2,9 @@ extends ../layouts/default
 
 block intro
   .row.row-heading.clearfix
-    h1 I'd Like to Hear From You
-    
+    unless enquirySubmitted
+      h1 I'd Like to Hear From You
+
 block content
   .no-padding-top.row.clearfix
     if enquirySubmitted

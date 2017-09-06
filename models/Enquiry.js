@@ -61,10 +61,10 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
     }).send({
       to: admins,
       from: {
-        name: 'jb_site',
-        email: 'contact@jb_site.com',
+        name: 'Justin Bellero Portfolio',
+        email: 'contact@justinbellero.com',
       },
-      subject: 'New Enquiry for jb_site',
+      subject: 'New Enquiry for Justin Bellero',
       enquiry: enquiry,
       brand: brand,
     }, callback);
