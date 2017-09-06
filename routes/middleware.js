@@ -1,21 +1,8 @@
-/**
- * This file contains the common middleware used by your routes.
- *
- * Extend or replace these functions as your application requires.
- *
- * This structure is not enforced, and just a starting point. If
- * you have more middleware you may want to group it as separate
- * modules in your project's /lib directory.
- */
 var _ = require('lodash');
 
 
 /**
   Initialises the standard view locals
-
-  The included layout depends on the navLinks array to generate
-  the navigation in the header, you may wish to change this array
-  or replace it with your own templates / logic.
 */
 const year = new Date();
 
@@ -35,26 +22,23 @@ exports.initLocals = function (req, res, next) {
 /**
     Inits the error handler functions into `res`
 */
-// exports.initErrorHandlers = function(req, res, next) {
-//
-//     res.err = function(err, title, message) {
-//         res.status(500).render('errors/500', {
-//             err: err,
-//             errorTitle: title,
-//             errorMsg: message
-//         });
-//     }
-//
-//     res.notfound = function(title, message) {
-//         res.status(404).render('errors/404', {
-//             errorTitle: title,
-//             errorMsg: message
-//         });
-//     }
-//
-//     next();
-//
-// };
+exports.initErrorHandlers = function (req, res, next) {
+
+  res.err = function (err, title, message) {
+    res.status(500).render('errors/500', {
+      err: err,
+      errorTitle: title,
+      errorMsg: message,
+    });
+  };
+
+  res.notfound = function (title, message) {
+    res.status(404).render('errors/404');
+  };
+
+  next();
+
+};
 
 /**
   Fetches and clears the flashMessages before a view is rendered

@@ -1,13 +1,9 @@
-// Simulate config options from your production environment by
-// customising the .env file in your project's root folder.
+// Development ENV
 require('dotenv').config();
 
-// Require keystone
-var keystone = require('keystone');
 
-// Initialise Keystone with your project's configuration.
-// See http://keystonejs.com/guide/config for available options
-// and documentation.
+const keystone = require('keystone');
+
 
 keystone.init({
   'name': 'Justin Bellero',
@@ -23,18 +19,17 @@ keystone.init({
 
   'frame guard': 'deny',
   'auto update': true,
-  // 'session': true,
+  'session': true,
   'session store': 'mongo',
   'auth': true,
   'user model': 'User',
   'wysiwyg images': true,
 });
 
-// Load your project's Models
+// Load All Models
 keystone.import('models');
 
-// Setup common locals for your templates. The following are required for the
-// bundled templates and layouts. Any runtime locals (that should be set uniquely
+// Setup common locals for templates. Any runtime locals (that should be set uniquely
 // for each request) should be added to ./routes/middleware.js
 keystone.set('locals', {
   _: require('lodash'),
@@ -43,7 +38,7 @@ keystone.set('locals', {
   editable: keystone.content.editable,
 });
 
-// Load your project's Routes
+// Load Routes
 keystone.set('routes', require('./routes'));
 
 
@@ -54,8 +49,6 @@ keystone.set('nav', {
   enquiries: 'enquiries',
   users: 'users',
 });
-
-// Start Keystone to connect to your database and initialise the web server
 
 
 if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
