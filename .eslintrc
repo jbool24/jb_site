@@ -1,6 +1,44 @@
 {
-    "extends": "keystone",
+    "env": {
+        "node": true,
+        "mocha": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 8,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "experimentalObjectRestSpread": true
+        }
+    },
+    "globals": {
+        "Promise": true
+    },
+    "extends": ["eslint:recommended", "keystone"],
     "rules": {
-        "indent": ["error", 2],
+        "indent": [
+            "error",
+            4,
+            {"SwitchCase": 1 }
+          ],
+          "linebreak-style": [
+            "error",
+            "unix"
+          ],
+          "eqeqeq": [
+            "error",
+            "always"
+          ],
+          "quotes": [
+            "warn",
+            "single"
+          ],
+          "semi": [
+            "error",
+            "always"
+          ],
+          "newline-per-chained-call": [
+            "error",
+            { "ignoreChainWithDepth": 3 }
+          ]
       }
 }
