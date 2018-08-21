@@ -1240,6 +1240,8 @@ h6 {
     width: 100%; }
   .col-3, .col-4, .col-6, .col-8, .col-10, .col-12 {
     width: 50%; }
+  .landscape {
+    width: 60%; }
   /*-----------------Header Elements-----------------*/
   #header .row {
     padding: 0 !important; }
