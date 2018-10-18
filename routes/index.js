@@ -31,6 +31,7 @@ const routes = {
 // Setup Route Bindings
 exports = module.exports = function (app) {
   // Views
+    app.get('*', (req, res) => res.redirect('https://' + req.headers.host + req.url));
     app.get('/', routes.views.index);
   // app.get('/blog/:category?', routes.views.blog);
   // app.get('/blog/post/:post', routes.views.post);
